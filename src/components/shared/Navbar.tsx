@@ -2,6 +2,13 @@ import { component$, useSignal } from '@builder.io/qwik';
 import { Link, useLocation } from '@builder.io/qwik-city';
 import Hamburger from 'hamburger-qwik';
 
+const routes = [
+  { name: 'Home', path: '/', icon: '🏡' },
+  { name: 'Blog', path: '/blog/', icon: '📖' },
+  { name: 'Projects', path: '/projects/', icon: '🚀' },
+  { name: 'About me', path: '/about/', icon: '👦' },
+];
+
 export const Navbar = component$(() => {
   const isOpen = useSignal(false);
   const loc = useLocation();
@@ -22,37 +29,18 @@ export const Navbar = component$(() => {
               isOpen.value ? 'flex' : 'hidden'
             } w-full flex-col  gap-[36px] py-[18px] text-center text-[18px] uppercase sm:my-[34px] sm:flex  sm:w-auto sm:flex-row sm:gap-[45px] sm:py-[0px] lg:gap-[45px] lg:text-[18px]`}
           >
-            <li>
-              <Link
-                href="/"
-                class={{
-                  'text-[#FCD34D]': loc.url.pathname === '/',
-                }}
-              >
-                Home <span class="font-normal">🏡</span>
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                href="/blog/"
-                class={{
-                  'text-[#FCD34D]': loc.url.pathname === '/blog/',
-                }}
-              >
-                Blog <span class="font-normal">📖</span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/about/"
-                class={{
-                  'text-[#FCD34D]': loc.url.pathname === '/about/',
-                }}
-              >
-                About me <span class="font-normal">👦</span>
-              </Link>
-            </li>
+            {routes.map((route) => (
+              <li key={route.name}>
+                <Link
+                  href={route.path}
+                  class={{
+                    'text-[#FCD34D]': loc.url.pathname === route.path,
+                  }}
+                >
+                  {route.name} <span class="font-normal">{route.icon}</span>
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </header>
