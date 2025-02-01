@@ -12,15 +12,12 @@ export default component$(() => {
   return (
     <section class="flex flex-col px-[32px] text-[34px] font-semibold sm:py-[24px] md:px-[104px] lg:px-[248px]">
       <header class="pb-8">
-        <h2>Projects</h2>
+        <h2 class="font-bold">Projects</h2>
       </header>
       <section class="flex flex-shrink-0 flex-col gap-y-[24px]">
         {projects.value.map((project) => {
           return (
-            <article
-              class="grid h-auto grid-cols-1 gap-x-[10px] sm:h-[168px] sm:grid-cols-7"
-              key={project.id}
-            >
+            <article class="flex bg-white p-4 gap-8" key={project.id}>
               <a
                 target="_blank"
                 href={project.url}
@@ -30,11 +27,12 @@ export default component$(() => {
                   <img
                     src={project.img}
                     alt={project.title}
-                    class="mx-auto h-[168px]  max-w-full rounded object-cover lg:w-[328px]"
+                    width={512}
+                    class="mx-auto  max-w-full object-cover rounded"
                   />
                 </figure>
               </a>
-              <section class="cols-span-1 flex flex-shrink-0 flex-col justify-center gap-y-[10px] sm:col-span-4">
+              <section class="flex flex-shrink-0 flex-col justify-center gap-y-[10px] sm:col-span-4 flex-1">
                 <header class="text-[24px] font-bold uppercase">
                   <h2>{project.title}</h2>
                 </header>
