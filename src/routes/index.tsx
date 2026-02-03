@@ -77,7 +77,6 @@ export default component$(() => {
   //   });
   // });
   return (
-<<<<<<< HEAD
     <main class="px-4 sm:px-8 lg:px-[112px] space-y-12 sm:space-y-20 lg:space-y-32">
       <section class="grid grid-cols-1 gap-y-6 sm:gap-y-12 xl:grid-cols-7 px-0 sm:px-6 lg:px-[120px] py-8 sm:py-16 lg:py-24 items-center">
         <section class="col-span-1 text-3xl sm:text-3xl lg:text-[42px] text-left xl:col-span-4 space-y-6 sm:space-y-8 order-2 xl:order-1">
@@ -105,25 +104,6 @@ export default component$(() => {
               CV
             </Button>
           </div>
-=======
-    <main class="px-[16px] sm:py-[24px] sm:px-[32px] lg:px-[112px] ">
-      <section class="grid grid-cols-1 gap-y-[38px] lg:gap-x-[38px] xl:grid-cols-7 ">
-        <section class="col-span-1 mx-auto text-center text-[50px] font-bold sm:text-[92px] lg:text-left xl:col-span-4">
-          <h1 class="leading-[68px] sm:leading-[108px]">
-            <div>
-              <span class="text-[#7BED9F]">¡Hola!</span>{' '}
-              <span class="font-normal">👋</span>,
-            </div>
-            <div>
-              <span>soy </span>
-              <span class="text-[#74B9FF]">Gustavo</span>{' '}
-            </div>
-            <div class="h-[62px] sm:h-[100px]">
-              <span ref={el}></span>
-            </div>
-            <div class="text-[#FD79A8]">\^o^/</div>
-          </h1>
->>>>>>> 62840d7ad2443722dd153b360000a55f4318e44e
         </section>
         <section class="col-span-1 flex items-center justify-start xl:justify-center xl:col-span-3 order-1 xl:order-2 w-full">
           <figure class="w-full max-w-[260px] sm:max-w-[320px] lg:max-w-md xl:max-w-full transition duration-200">
