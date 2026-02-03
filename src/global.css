@@ -161,8 +161,36 @@
   * {
     @apply border-border outline-ring/50;
   }
+  
+  /* Transición suave SOLO en elementos de fondo, NO en textos */
+  body, div, section, header, footer, nav, main, aside, article {
+    transition: background-color 0.6s ease, border-color 0.6s ease;
+  }
+  
+  /* View Transitions API para cambio ultra suave */
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 0.6s;
+  }
+  
   body {
     @apply bg-background text-foreground;
+    /* Gradiente mesh moderno y visible */
+    background: 
+      radial-gradient(circle at 10% 20%, rgba(255, 118, 117, 0.12) 0%, transparent 40%),
+      radial-gradient(circle at 90% 10%, rgba(116, 185, 255, 0.1) 0%, transparent 40%),
+      radial-gradient(circle at 50% 90%, rgba(123, 237, 159, 0.08) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(162, 155, 254, 0.08) 0%, transparent 40%),
+      linear-gradient(to bottom, #ffffff, #f9fafb);
+  }
+  .dark body {
+    /* Gradiente mesh para modo oscuro - más suave y legible */
+    background: 
+      radial-gradient(circle at 10% 20%, rgba(255, 118, 117, 0.10) 0%, transparent 40%),
+      radial-gradient(circle at 90% 10%, rgba(116, 185, 255, 0.10) 0%, transparent 40%),
+      radial-gradient(circle at 50% 90%, rgba(123, 237, 159, 0.08) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(162, 155, 254, 0.08) 0%, transparent 40%),
+      linear-gradient(to bottom, rgb(17 24 39), rgb(31 41 55));
   }
 }
 

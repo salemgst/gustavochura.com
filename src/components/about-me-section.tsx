@@ -9,7 +9,7 @@ export default component$(() => {
             width={412}
             height={412}
             class={`vov fade-in-right w-full rounded-xl transition duration-200	`}
-            src="https://placehold.it/512x412"
+            src="/crazy8.png"
             alt="gustavoca image"
           />
         </figure>
@@ -20,9 +20,9 @@ export default component$(() => {
           software.
         </h2>
 
-        <h3 class="text-2xl lg:text-4xl text-gray-600 leading-snug">
+        <h3 class="text-2xl lg:text-4xl text-gray-600 dark:text-gray-300 leading-snug">
           Soy un un gran apasiado a los deportes extremos. No salgo mucho con mi
-          familia, suelo estar realizando deportes como el breakdance cuando
+          familia, suelo estar leyendo libros, y editando videos, me gusta mucho aprender cosas nuevas cuando
           estoy aburrido.
         </h3>
       </section>
