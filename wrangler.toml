@@ -7,6 +7,12 @@ name = "gustavochura-com"
 # Compatibility date for Cloudflare Workers runtime
 compatibility_date = "2026-02-03"
 
+# Build output directory for Pages
+pages_build_output_dir = "dist"
+
+# Enable Node.js compatibility for built-in modules (async_hooks, etc.)
+compatibility_flags = ["nodejs_compat"]
+
 # Note: For Cloudflare Pages deployments, use:
 # wrangler pages deploy dist --project-name=gustavochura-com
 # 
