@@ -1,0 +1,13 @@
+# Cloudflare Pages configuration for Qwik
+# This file is used by Wrangler CLI for local development and deployment
+
+# Project name (must match your Cloudflare Pages project name)
+name = "gustavochura-com"
+
+# Compatibility date for Cloudflare Workers runtime
+compatibility_date = "2026-02-03"
+
+# Note: For Cloudflare Pages deployments, use:
+# wrangler pages deploy dist --project-name=gustavochura-com
+# 
+# Do NOT use "wrangler versions upload" - that's for Workers, not Pages!
