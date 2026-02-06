@@ -2,7 +2,7 @@
 # This file is used by Wrangler CLI for local development and deployment
 
 # Project name (must match your Cloudflare Pages project name)
-name = "gustavochura-com"
+name = "loxgsr"
 
 # Compatibility date for Cloudflare Workers runtime
 compatibility_date = "2026-02-03"
